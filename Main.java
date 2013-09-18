@@ -1,7 +1,7 @@
 import java.util.concurrent.TimeUnit;
 
 /*
- * Simple starter class for running problems and calculating
+ * Simple class for running problems and calculating
  * how long they take.
  */
 
@@ -9,12 +9,10 @@ public class Main {
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
 		
-		int input = 20;
-		String result = Long.toString(Problem15.numLatticePaths(input));
-		System.out.println(result);
+		System.out.println(new Problem15().run());
 		
 		float  elapsedTimeInSeconds = (System.nanoTime() - startTime) / 
-				(float)1000000000;
+				(float)1000000000; // TODO Change to 1000000000F ????
 		System.out.println("Took " + elapsedTimeInSeconds + " seconds");
 	}
 }

@@ -4,7 +4,12 @@
  * right corner.  How many such routes are there through a 20×20 grid?
  */
 
-public class Problem15 {
+public class Problem15 implements Problem{
+	
+	public String run() {
+		int input = 20;
+		return Long.toString(numLatticePaths(input));
+	}
 	
 	/*
 	 * Solves the problem recursively by reducing the problem to
