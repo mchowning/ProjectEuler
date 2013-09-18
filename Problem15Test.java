@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class Problem15Test {
 
 	@Test
@@ -28,5 +27,10 @@ public class Problem15Test {
 	@Test
 	public void testFive() {
 		assertEquals(Problem15.numLatticePaths(5), 252);
+	}
+	
+	@Test
+	public void testTwenty() {
+		assertEquals(Problem15.numLatticePaths(20), 137846528820L);
 	}
 }

@@ -32,6 +32,24 @@ public class Problem15 {
 		return numLatticePaths(prevResults, n, n);
 	}
 	
+	/*
+	// An alternative implementation some other people (far smarter than
+	// me used was n choose k and binomial coefficients.  In particular, 
+	// for a X, Y size square of lattices, where X <= Y, there are 
+	// X + Y choose Y lattice paths.  The binomial coefficient to calculate
+	// this is X! / ((X - Y)! Y!).  The below two functions work for smaller
+	// numbers, but long breaks once you get bigger (definitely doesn't work
+	// for 20).  Would probably need to use BigInteger instead.
+	public static long numLatticePaths(int n) {
+		return factorial(2 * n) / (long)Math.pow(factorial(n), 2);
+	}
+	
+	private static long factorial(int n) {
+		if (n == 1) return n;
+		return n * factorial(n - 1);
+	}
+	*/
+	
 	private static long numLatticePaths(long[][] prevResults, int x, int y) {
 		
 		// If the lattice is 1 in any direction, then the possible number of
